@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemProductCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:outlineAmbientShadowColor="?colorOnSecondary"
+    android:outlineSpotShadowColor="?colorOnSecondary"
+    app:cardBackgroundColor="?colorOnPrimary"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/appNameTextView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemProductConstraintLyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/itemProductIconCardView"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/itemProductIconImageView"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="?colorOnPrimary"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dragon_ball_z_icon" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemProductTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="start"
+            android:textColor="?colorPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/itemProductIconCardView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Dragon Ball Z" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemProductPriceTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="start"
+            android:textColor="?colorOnSecondary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/itemProductIconCardView"
+            app:layout_constraintTop_toBottomOf="@id/itemProductTitleTextView"
+            tools:text="$ 9.99" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemProductRatingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_blue_rounded_30dp_stroke_1dp"
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="2dp"
+            android:textColor="?colorOnSecondary"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@id/itemProductIconCardView"
+            app:layout_constraintTop_toBottomOf="@id/itemProductPriceTextView"
+            tools:text="4.7 / 5.0" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_right" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

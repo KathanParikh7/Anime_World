@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorOnPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?colorOnPrimary"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/productDetailsCheckOutButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1"
+        tools:context=".view.ProductDetailActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/productDetailsCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:outlineAmbientShadowColor="?colorOnSecondary"
+            android:outlineSpotShadowColor="?colorOnSecondary"
+            app:cardBackgroundColor="?colorOnPrimary"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/productDetailsConstraintLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?colorOnPrimary">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/productDetailsImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dragon_ball_z_banner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productDetailsTitleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="start|top"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="?colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/productDetailsPriceTextView"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productDetailsImageView"
+                    tools:text="Dragon Ball Z" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productDetailsPriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="end|top"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="?colorOnSecondary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productDetailsImageView"
+                    tools:text="$ 9.99" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productDetailsReleaseYearTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:gravity="start|top"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="?colorOnSecondary"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productDetailsTitleTextView"
+                    tools:text="Release Year: 1986" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productRatingTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="end|top"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/blue_500"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productDetailsPriceTextView"
+                    tools:text="4.7 / 5.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productDetailsSeasonsYearTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:gravity="start|top"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="?colorOnSecondary"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productDetailsReleaseYearTextView"
+                    tools:text="6 seasons and counting" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productDetailsDescriptionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="start|top"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="?colorOnSecondary"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@id/productDetailsReleaseYearTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productDetailsSeasonsYearTextView"
+                    tools:text="Dragon Ball is a Japanese media franchise created by Akira Toriyama in 1984. The series follows the adventures of the protagonist, Son Goku, from his childhood through adulthood as he trains in martial arts.  Along his journey, Goku makes several other friends, becomes a family man, discovers his alien heritage, and battles a wide variety of villains, many of whom also seek the Dragon Balls.Dragon Ball is a Japanese media franchise created by Akira Toriyama in 1984. The series follows the adventures of the protagonist, Son Goku, from his childhood through adulthood as he trains in martial arts.  Along his journey, Goku makes several other friends, becomes a family man, discovers his alien heritage, and battles a wide variety of villains, many of whom also seek the Dragon Balls.Dragon Ball is a Japanese media franchise created by Akira Toriyama in 1984. The series follows the adventures of the protagonist, Son Goku, from his childhood through adulthood as he trains in martial arts.  Along his journey, Goku makes several other friends, becomes a family man, discovers his alien heritage, and battles a wide variety of villains, many of whom also seek the Dragon Balls.Dragon Ball is a Japanese media franchise created by Akira Toriyama in 1984. The series follows the adventures of the protagonist, Son Goku, from his childhood through adulthood as he trains in martial arts.  Along his journey, Goku makes several other friends, becomes a family man, discovers his alien heritage, and battles a wide variety of villains, many of whom also seek the Dragon Balls.Dragon Ball is a Japanese media franchise created by Akira Toriyama in 1984. The series follows the adventures of the protagonist, Son Goku, from his childhood through adulthood as he trains in martial arts.  Along his journey, Goku makes several other friends, becomes a family man, discovers his alien heritage, and battles a wide variety of villains, many of whom also seek the Dragon Balls.Dragon Ball is a Japanese media franchise created by Akira Toriyama in 1984. The series follows the adventures of the protagonist, Son Goku, from his childhood through adulthood as he trains in martial arts.  Along his journey, Goku makes several other friends, becomes a family man, discovers his alien heritage, and battles a wide variety of villains, many of whom also seek the Dragon Balls.Dragon Ball is a Japanese media franchise created by Akira Toriyama in 1984. The series follows the adventures of the protagonist, Son Goku, from his childhood through adulthood as he trains in martial arts.  Along his journey, Goku makes several other friends, becomes a family man, discovers his alien heritage, and battles a wide variety of villains, many of whom also seek the Dragon Balls.Dragon Ball is a Japanese media franchise created by Akira Toriyama in 1984. The series follows the adventures of the protagonist, Son Goku, from his childhood through adulthood as he trains in martial arts.  Along his journey, Goku makes several other friends, becomes a family man, discovers his alien heritage, and battles a wide variety of villains, many of whom also seek the Dragon Balls." />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productDetailsDescriptionTextView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/productDetailsCheckOutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_blue_rounded_10dp"
+        android:gravity="center"
+        android:text="@string/check_out"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

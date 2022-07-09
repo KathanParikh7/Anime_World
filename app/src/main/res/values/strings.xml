@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Anime</string>
+    <string name="anime_world">Anime World</string>
+    <string name="about_app">Stream the world\'s largest anime library. Watch over 1,000 titles - from past seasons to new episodes fresh from Japan, including critically acclaimed Anime World Originals.\n\nGet full access to new shows like Dr. STONE, Tower of God, Re:ZERO -Starting Life in Another World, Black Clover, Food Wars!, Fire Force, plus favorites like One Piece, Naruto Shippuden, My Hero Academia, Hunter x Hunter, JoJo\'s Bizarre Adventure, and more! Whether you\'re new to anime, or have been a fan for decades, Anime World has something you\'ll love.</string>
+    <string name="buy_anime">Buy Anime</string>
+    <string name="check_out">Check Out</string>
+    <string name="checkout">Checkout</string>
+    <string name="pay">Pay</string>
+</resources>
